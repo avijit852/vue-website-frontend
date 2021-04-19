@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link href="<%= BASE_URL %>css/bootstrap.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="<%= BASE_URL %>js/bootstrap.min.js"></script>
+
+    <!-------------- menu ------------------>
+    <link href="<%= BASE_URL %>css/menu.css" type="text/css" rel="Stylesheet">
+    <link href="<%= BASE_URL %>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!------------ menu ------------->
+
+    <!------------ animate-header -------------->
+    <link rel="stylesheet" href="<%= BASE_URL %>css/animate.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>css/hover.css">
+    <!----------- animate-header ------------->
+
+    <!----------- carosel ------------>
+    <link href="<%= BASE_URL %>css/owl.carousel.css" type="text/css" rel="stylesheet">
+    <!--------------- carosel ---------------->
+
+    <!--------------- style ---------------->
+    <link href="<%= BASE_URL %>css/style.css" type="text/css" rel="stylesheet">
+
+
+
+
+    <!--------------- style ---------------->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+
+    <!-- header -->
+
+
+
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+
+
+    
+
+    <script src="<%= BASE_URL %>js/main.js"></script>
+    <script src="<%= BASE_URL %>js/wow.min.js"></script>
+    <script src="<%= BASE_URL %>js/superfish.js" type="text/javascript"></script>
+
+    <!-------------- menu ------------------>
+
+    <!--------------- animate-header ---------------->
+    <script>
+
+      $(document).ready(function(){
+    var shrinkHeader = 30;
+      $(window).scroll(function() {
+        var scroll = getCurrentScroll();
+        //alert(scroll);
+          if ( scroll >= shrinkHeader ) {
+
+              $('#myHeader').addClass('sticky');
+              $('.btm-logo').css("display","block");
+            }
+            else {
+                $('#myHeader').removeClass('sticky');
+                $('.btm-logo').css("display","none");
+            }
+      });
+    function getCurrentScroll() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+        }
+    });
+    </script>
+        <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=190179344811994";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!--------------- animate-header ---------------->
+
+
+
+          <script type="text/javascript">
+      $('.add').click(function () {
+        if ($(this).prev().val() < 40) {
+          $(this).prev().val(+$(this).prev().val() + 1);
+        }
+    });
+    $('.sub').click(function () {
+        if ($(this).next().val() > 1) {
+          if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+        }
+    });
+    </script>
+
+    <!-- <script type="text/javascript">
+      $(function() {
+      $('a[href*=#]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+      });
+    });</script> -->
+
+
+
+        <script src="<%= BASE_URL %>js/owl.carousel.js" type="text/javascript"></script>
+        
+        <script>
+          $('.owl2').owlCarousel({
+        loop:true,
+        margin:10, autoplay:true,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+          </script>
+
+
+
+
+
+    <script type="text/javascript">
+      // $(document).ready(function() {
+    function grtsrc(videoSrc){
+      //alert(videoSrc);
+    // Gets the video src from the data-src on each button
+
+    // var $videoSrc;  
+    // $('.video-btn').click(function() {
+    //     $videoSrc = $(this).data( "src" );
+    // });
+    //console.log($videoSrc);
+
+      
+      
+    // when the modal is opened autoplay it  
+    $('#myModal').on('shown.bs.modal', function (e) {
+        
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    $("#video").attr('src',videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+    })
+      
+
+
+    // stop playing the youtube video when I close the modal
+    $('#myModal').on('hide.bs.modal', function (e) {
+        // a poor man's stop video
+        $("#video").attr('src',$videoSrc); 
+    }) 
+        
+
+    // document ready  
+    };
+
+    function hideModal(){
+    $('#myModal').on('hide.bs.modal', function (e) {
+        // a poor man's stop video
+        $("#video").attr('src',$videoSrc); 
+    }) 
+    }
+
+    </script>
+
+  </body>
+</html>
